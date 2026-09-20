@@ -1,0 +1,86 @@
+:root{
+    --color-hud: #f8f9fa;
+    --border-buttons: #ababad;
+    --btnHub-buttons:rgb(206, 29, 29);
+    --card: rgba(0, 0, 0, 0.05);;
+    --background:#ffffff;
+    --icons:rgb(12, 12, 12);
+    --p:black;
+    --iconsNormal: rgb(167, 6, 6);
+}
+
+body{
+    background-color: var(--background);
+}
+
+p{
+    color: var(--p);
+    font-family: 'Inter', sans-serif;
+}
+
+#hud, #footer{
+    background-color: var(--color-hud);
+    z-index: 3;
+    top: 0%;
+}
+
+#myCarousel{
+    width: 100%;
+    height: 30vh;
+    margin-top: 5.2%;
+}
+
+.carousel-inner, .carousel-item, .imgcarousel{
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    background-color: var(--border-buttons);
+    top: 40%;
+    width: 2%;
+    height: 15%;
+    border-radius: 70%;
+}
+
+.txtbanner, .btnBanner{
+    color:var(--color-hud);
+}
+
+#textBanner{
+    top: 20%;
+    left: 10%;
+}
+
+.btnBanner{
+    border-color: var(--border-buttons);
+    background-color: var(--btnHub-buttons);
+}
+
+.card{
+    background: #fff;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    position: relative;
+}
+
+.imgFeatured{
+    height: 70%;
+}
+
+.imgWatch{
+    width: 20%;
+    height: 50px;
+}
+
+i{
+    color: var(--icons);
+}
+
+.iregulars{
+    color:var(--iconsNormal)
+}
+
+.linkFooter{
+    display: block;
+}
