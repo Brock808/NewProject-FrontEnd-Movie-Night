@@ -30,25 +30,25 @@
 
                 <div class="nav-item">
                     <div class="btn-group border border-secondary">
-                        <button class="btn">Home</button>
-                        <button class="btn">Movies</button>
-                        <button class="btn">Top Rated</button>
-                        <button class="btn">Contact</button>
+                        <button class="btn btnBanner">Home</button>
+                        <button class="btn btnBanner">Movies</button>
+                        <button class="btn btnBanner">Top Rated</button>
+                        <button class="btn btnBanner">Contact</button>
                     </div>
                 </div>
 
                 <div class="nav-item pe-2 d-flex">
                     <div class="input-group">
                     <input type="text" placeholder="Search...">
-                    <button class="btn border border-secondary"><i class="bi bi-search"></i></button>
+                    <button class="btn btnBanner border border-secondary"><i class="bi bi-search"></i></button>
                     </div>
                     <div class="ps-2">
-                    <button class="btn border border-secondary dropdown-toggle" data-bs-toggle="dropdown"><span class="navbar-toggler-icon"></span></button>
+                    <button class="btn btnBanner border border-secondary dropdown-toggle" data-bs-toggle="dropdown"><span class="navbar-toggler-icon"></span></button>
 
                     <!-- Making dropdownMenu  -->
                     <div id="dropMenu" class="dropdown-menu dropdown-menu-end">
-                    <button class="dropdown-item"> <i class="bi bi-brightness-low"></i>Dark Mode</button>
-                    <button class="dropdown-item"><i class="bi bi-brightness-high-fill"></i>Light Mode</button>
+                    <button id="darkMode" class="dropdown-item"> <i class="bi bi-brightness-low"></i>Dark Mode</button>
+                    <button id="lightMode" class="dropdown-item"><i class="bi bi-brightness-high-fill"></i>Light Mode</button>
                     </div>
                     </div>
                 </div>
@@ -98,73 +98,81 @@
             <div class="container-fluid">
                 <div class="row p-2">
                     <!-- Featured Movies and top rated movies  -->
-                    <div class="col-10 ">
+                    <div class="col-10 g-1">
                         <!-- Fixing first the Featured Movies -->
                         <p class="display-3"><i class="bi bi-star-fill iregulars"></i> Featured Movies</p>
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4">
-                            <div class="col card">
-                                <img
-                                alt="inter"
-                                src="images/interestellar.jpeg"
-                                class="imgFeatured img-thumbnail">
-                                <p class="h2 text-center">Interestellar</p>
-                                <div class="d-flex position-relative">
-                                <p class="badge bg-primary text-start">Sci-Fi</p>
-                                <p class="w-100 text-end"><i class="bi bi-star-fill iregulars"></i> 9.3</p>
-                                </div>
-                                <p class="h6">When Earth faces extinction, a team of explorers journeys beyond the stars to find humanity a new home.</p>
-                                <div class="position-absolute d-flex bottom-0 p-1 w-100 pe-4 justify-content-between">
-                                    <button class="btn btnBanner addToast">View Details</button>
-                                    <button class="btn btnBanner addToast"><i class="bi bi-bookmark-star-fill"></i></button>
-                                </div>
-                            </div>
-                            <div class="col card">
-                                <img
-                                alt="The Lord of the Rings"
-                                src="images/lordOfTheRings.jpeg"
-                                class="imgFeatured img-thumbnail">
-                                <p class="h2 text-center">The Lord of the Rings</p>
-                                <div class="d-flex position-relative">
-                                <p class="badge bg-success text-start">Adventure</p>
-                                <p class="w-100 text-end"><i class="bi bi-star-fill iregulars"></i> 9.9</p>
-                                </div>
-                                <p class="h6">A humble hobbit embarks on an epic quest to destroy a powerful ring and save Middle-earth from darkness.</p>
-                                <div class="position-absolute d-flex bottom-0 p-1 w-100 pe-4 justify-content-between">
-                                    <button class="btn btnBanner addToast">View Details</button>
-                                    <button class="btn btnBanner addToast"><i class="bi bi-bookmark-star-fill"></i></button>
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-2">
+                            <div class="col">
+                                <div class="card p-2">
+                                    <img
+                                    alt="inter"
+                                    src="images/interestellar.jpeg"
+                                    class="img-thumbnail">
+                                    <p class="h2 text-center">Interestellar</p>
+                                    <div class="d-flex position-relative">
+                                    <p class="badge bg-primary text-start">Sci-Fi</p>
+                                    <p class="w-100 text-end"><i class="bi bi-star-fill iregulars"></i> 9.3</p>
+                                    </div>
+                                    <p class="h6">When Earth faces extinction, a team of explorers journeys beyond the stars to find humanity a new home.</p>
+                                    <div class="d-flex h-100 justify-content-between align-items-end">
+                                        <button class="btn btnBanner addToast">View Details</button>
+                                        <button class="btn btnBanner addToast"><i class="bi bi-bookmark-star-fill"></i></button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col card">
-                                <img
-                                alt="The Dark Knight"
-                                src="images/batman.jpeg"
-                                class="imgFeatured img-thumbnail">
-                                <p class="h2 text-center">The Dark Knight</p>
-                                <div class="d-flex position-relative">
-                                <p class="badge bg-danger text-start">Action</p>
-                                <p class="w-100 text-end"><i class="bi bi-star-fill iregulars"></i> 9.3</p>
-                                </div>
-                                <p class="h6">Batman faces the Joker, a ruthless criminal determined to plunge Gotham City into chaos.</p>
-                                <div class="position-absolute d-flex bottom-0 p-1 w-100 pe-4 justify-content-between">
-                                    <button class="btn btnBanner addToast">View Details</button>
-                                    <button class="btn btnBanner addToast"><i class="bi bi-bookmark-star-fill"></i></button>
+                            <div class="col">
+                                <div class="card p-2">
+                                    <img
+                                    alt="The Lord of the Rings"
+                                    src="images/lordOfTheRings.jpeg"
+                                    class="img-thumbnail">
+                                    <p class="h2 text-center">The Lord of the Rings</p>
+                                    <div class="d-flex position-relative">
+                                    <p class="badge bg-success text-start">Adventure</p>
+                                    <p class="w-100 text-end"><i class="bi bi-star-fill iregulars"></i> 9.9</p>
+                                    </div>
+                                    <p class="h6">A humble hobbit embarks on an epic quest to destroy a powerful ring and save Middle-earth from darkness.</p>
+                                    <div class="d-flex h-100 justify-content-between align-items-end">
+                                        <button class="btn btnBanner addToast">View Details</button>
+                                        <button class="btn btnBanner addToast"><i class="bi bi-bookmark-star-fill"></i></button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col card">
-                                <img
-                                alt="inter"
-                                src="images/Inception.jpeg"
-                                class="imgFeatured img-thumbnail">
-                                <p class="h2 text-center">Inception</p>
-                                <div class="d-flex position-relative">
-                                <p class="badge bg-danger text-start">Action</p>
-                                <p class="w-100 text-end"><i class="bi bi-star-fill iregulars"></i> 8.6</p>
+                            <div class="col">
+                                <div class="card p-2">
+                                    <img
+                                    alt="The Dark Knight"
+                                    src="images/batman.jpeg"
+                                    class="img-thumbnail">
+                                    <p class="h2 text-center">The Dark Knight</p>
+                                    <div class="d-flex position-relative">
+                                    <p class="badge bg-danger text-start">Action</p>
+                                    <p class="w-100 text-end"><i class="bi bi-star-fill iregulars"></i> 9.3</p>
+                                    </div>
+                                    <p class="h6">Batman faces the Joker, a ruthless criminal determined to plunge Gotham City into chaos.</p>
+                                    <div class="d-flex h-100 justify-content-between align-items-end">
+                                        <button class="btn btnBanner addToast">View Details</button>
+                                        <button class="btn btnBanner addToast"><i class="bi bi-bookmark-star-fill"></i></button>
+                                    </div>
                                 </div>
-                                <p class="h6">When Earth faces extinction, a team of explorers journeys beyond the stars to find humanity a new home.</p>
-                                <div class="position-absolute d-flex bottom-0 p-1 w-100 pe-4 justify-content-between">
-                                    <button class="btn btnBanner addToast">View Details</button>
-                                    <button class="btn btnBanner addToast"><i class="bi bi-bookmark-star-fill"></i></button>
-                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card p-2">
+                                    <img
+                                    alt="inter"
+                                    src="images/Inception.jpeg"
+                                    class="img-thumbnail">
+                                    <p class="h2 text-center">Inception</p>
+                                    <div class="d-flex position-relative">
+                                    <p class="badge bg-danger text-start">Action</p>
+                                    <p class="w-100 text-end"><i class="bi bi-star-fill iregulars"></i> 8.6</p>
+                                    </div>
+                                    <p class="h6">When Earth faces extinction, a team of explorers journeys beyond the stars to find humanity a new home.</p>
+                                    <div class="d-flex h-100 justify-content-between align-items-end">
+                                        <button class="btn btnBanner addToast">View Details</button>
+                                        <button class="btn btnBanner addToast"><i class="bi bi-bookmark-star-fill"></i></button>
+                                    </div>
+                                    </div>
                             </div>
                         </div>
 
@@ -256,8 +264,39 @@
                             </ul>
                         </div>
 
+                        <!-- Button Random Movie  -->
+                        <div>
+                            <button id="btnRecomendation" class="btn btnBanner w-100 m-1">Show Recomendation</button>
+                        </div>
+
+                        <!-- ToastForRandomMovie  -->
+                        <div id="toastMovie0" class="toast hide position-fixed bottom-0 end-0 m-3" style="z-index: 3;">
+                            <div class="toast-header d-flex justify-content-between">
+                                <p class="h6">Today's recomendation: Interestellar</p>
+                                <button class="btn-close" data-bs-dismiss="toast"></button>
+                            </div>
+                        </div>
+                        <div id="toastMovie1" class="toast hide position-fixed bottom-0 end-0 m-3" style="z-index: 3;">
+                            <div class="toast-header d-flex justify-content-between">
+                                <p class="h6">Today's recomendation: Inception</p>
+                                <button class="btn-close" data-bs-dismiss="toast"></button>
+                            </div>
+                        </div>
+                        <div id="toastMovie2" class="toast hide position-fixed bottom-0 end-0 m-3" style="z-index: 3;">
+                            <div class="toast-header d-flex justify-content-between">
+                                <p class="h6">Today's recomendation: The Lord of the Rings</p>
+                                <button class="btn-close" data-bs-dismiss="toast"></button>
+                            </div>
+                        </div>
+                        <div id="toastMovie3" class="toast hide position-fixed bottom-0 end-0 m-3" style="z-index: 3;">
+                            <div class="toast-header d-flex justify-content-between">
+                                <p class="h6">Today's recomendation: The Dark Knight</p>
+                                <button class="btn-close" data-bs-dismiss="toast"></button>
+                            </div>
+                        </div>
+
                         <!-- Toast  added to view details buttons or flag icons -->
-                        <div id="imToast" class="toast hide position-fixed bottom-0 end-0 m-3">
+                        <div id="imToast" class="toast hide position-fixed bottom-0 end-0 m-3" style="z-index: 3;">
                             <div class="toast-header d-flex justify-content-between align-items-center bg-success">
                             <p class="h4"><i class="bi bi-hand-thumbs-up-fill"></i> Success!</p>
                             <button class="btn-close" data-bs-dismiss="toast"></button>
@@ -306,10 +345,11 @@
                 </div>
 
 
-                <hr>
+                <hr class="hr">
                 
                 <div class="row">
-                    Making copiright
+                    <p class="h2 text-center"><i class="bi bi-heart-fill iregulars"></i> Second personal project to practice Bootstrap, CSS, HTML and Jquery <i class="bi bi-heart-fill iregulars"></i></p>
+                    <p class="h5 text-center">Marcos Cattaneo</p>
                 </div>
             </div>
         </footer>
@@ -323,12 +363,6 @@
             crossorigin="anonymous"
         ></script>
 
-        <script>
-            $(function(){
-                $(".addToast").on("click", function(){
-                    $("#imToast").toast("show")
-                })
-            })
-        </script>
+        <script src="js.js"></script>
     </body>
 </html>
