@@ -2,7 +2,6 @@
     --color-hud: #f8f9fa;
     --border-buttons: #ababad;
     --btnHub-buttons:rgb(206, 29, 29);
-    --card: rgba(0, 0, 0, 0.05);;
     --background:#ffffff;
     --icons:rgb(12, 12, 12);
     --p:black;
@@ -10,6 +9,7 @@
     --card:#fff;
     --bordercard: #e9ecef;
     --boxshadow: rgba(0,0,0,.08);
+    --txtHub:#e9ecef;
 }
 
 .nightMode{
@@ -23,6 +23,7 @@
     --border-buttons: #495057;
     --bordercard: #343a40;
     --boxshadow: rgba(0,0,0,.4);
+    --txtHub:#e9ecef;
 }
 
 body{
@@ -46,7 +47,7 @@ p, .hr{
 
 #myCarousel{
     width: 100%;
-    height: 30vh;
+    height: 50vh;
     margin-top: 5.2%;
 }
 
@@ -64,7 +65,7 @@ p, .hr{
 }
 
 .txtbanner, .btnBanner{
-    color:var(--p);
+    color:var(--txtHub);
 }
 
 #textBanner{
@@ -72,7 +73,7 @@ p, .hr{
     left: 10%;
 }
 
-.btnBanner{
+.btnBanner, .dropdown-item, .dropdown-menu{
     color: var(--card);
     border-color: var(--border-buttons);
     background-color: var(--btnHub-buttons);
@@ -84,6 +85,12 @@ p, .hr{
     box-shadow: 0 4px 12px var(--boxshadow);
     position: relative;
     height: 100%;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: scale(1.03);
 }
 
 .imgWatch{
@@ -106,11 +113,16 @@ i{
 .toast, .toast-header, .toast-body{
     background-color: var(--card);
     color: var(--p);
-    border-color: var(--bordercard);
+    border: 0.5px solid var(--p);
 }
 
 .list-group-item{
     background-color: var(--card);
     color: var(--p);
-    border-color: var(--bordercard);
+    border-color: 0.5px solid var(--bordercard);
+    cursor: pointer;
+}
+
+.mainCategorie{
+    border: 0px solid var(--iconsNormal);
 }
