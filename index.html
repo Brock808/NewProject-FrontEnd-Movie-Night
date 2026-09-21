@@ -23,12 +23,16 @@
 
     <body>
         <header>
-            <nav id="hud" class="navbar d-flex justify-content-between position-fixed w-100">
+            <nav id="hud" class="navbar navbar-expand-lg position-fixed w-100">
                 <div class="nav-item ps-2">
                     <p class="display-5"><i class="bi bi-camera-reels-fill iregulars"></i> Movie <span class="iregulars">Night</span></p>
                 </div>
 
-                <div class="nav-item">
+            <button class="btn btnBanner border border-secondary dropdown-toggle d-lg-none" data-bs-toggle="collapse" data-bs-target="#mainMenu"><span class="navbar-toggler-icon"></span></button>
+
+            <div id="mainMenu" class="collapse navbar-collapse">
+                <div class="d-flex w-100 justify-content-between">
+                <div class="nav-item mx-auto">
                     <div class="btn-group border border-secondary">
                         <button class="btn btnBanner">Home</button>
                         <button class="btn btnBanner">Movies</button>
@@ -42,13 +46,12 @@
                     <input type="text" placeholder="Search...">
                     <button class="btn btnBanner border border-secondary"><i class="bi bi-search"></i></button>
                     </div>
-                    <div class="ps-2">
                     <button class="btn btnBanner border border-secondary dropdown-toggle" data-bs-toggle="dropdown"><span class="navbar-toggler-icon"></span></button>
-
                     <!-- Making dropdownMenu  -->
                     <div id="dropMenu" class="dropdown-menu dropdown-menu-end">
                     <button id="darkMode" class="dropdown-item"> <i class="bi bi-moon-fill"> Dark Mode / <i class="bi bi-brightness-high-fill"></i>Light Mode</i></button>
                     </div>
+                </div>
                 </div>
             </nav>
         </header>
